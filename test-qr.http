@@ -1,0 +1,15 @@
+### 生成二维码 - 默认尺寸
+GET http://localhost:8080/api/api/qrcode/generate?content=Hello%20World
+Accept: image/png
+
+### 生成二维码 - 自定义尺寸
+GET http://localhost:8080/api/api/qrcode/generate?content=https://www.example.com&width=500&height=500
+Accept: image/png
+
+### 生成网址二维码
+GET http://localhost:8080/api/api/qrcode/generate?content=https://github.com&width=400&height=400
+Accept: image/png
+
+### 生成中文内容二维码
+GET http://localhost:8080/api/api/qrcode/generate?content=%E4%BD%A0%E5%A5%BD%E4%B8%96%E7%95%8C&width=300&height=300
+Accept: image/png
