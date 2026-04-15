@@ -1,0 +1,31 @@
+# 应用配置
+spring:
+  application:
+    name: user-demo
+
+  # 数据源配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/user_db?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: Zhao070626.
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # JPA配置
+  jpa:
+    hibernate:
+      ddl-auto: update  # 开发环境用 update，生产环境用 validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+  # 多环境配置
+  profiles:
+    active: default
+
+# 服务器配置
+server:
+  port: 8080
+  servlet:
+    context-path: /api
