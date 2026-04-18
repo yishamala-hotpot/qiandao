@@ -36,6 +36,10 @@ public class User {
     @Column(length = 20)
     private UserStatus status = UserStatus.ACTIVE;
 
+    @Enumerated(EnumType.STRING)
+    @Column(length = 20)
+    private UserRole role = UserRole.USER;
+
     @CreationTimestamp
     @Column(name = "create_time", updatable = false)
     private LocalDateTime createTime;
@@ -46,5 +50,9 @@ public class User {
 
     public enum UserStatus {
         ACTIVE, INACTIVE, LOCKED
+    }
+
+    public enum UserRole {
+        ADMIN, USER
     }
 }

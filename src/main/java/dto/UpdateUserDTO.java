@@ -13,4 +13,6 @@ public class UpdateUserDTO {
     private String phone;
 
     private User.UserStatus status;
+
+    private User.UserRole role;
 }

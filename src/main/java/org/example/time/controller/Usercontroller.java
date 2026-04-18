@@ -18,11 +18,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/users")
 @RequiredArgsConstructor
 @Slf4j
 @Tag(name = "用户管理", description = "用户相关接口")
-public class UserController {
+public class Usercontroller {
 
     private final UserService userService;
 

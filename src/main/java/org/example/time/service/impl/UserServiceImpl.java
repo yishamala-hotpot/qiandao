@@ -41,6 +41,7 @@ public class UserServiceImpl implements UserService {
         user.setPassword(userDTO.getPassword());
         user.setEmail(userDTO.getEmail());
         user.setPhone(userDTO.getPhone());
+        user.setRole(userDTO.getRole());
 
         return userRepository.save(user);
     }
@@ -69,6 +70,9 @@ public class UserServiceImpl implements UserService {
         }
         if (userDTO.getStatus() != null) {
             user.setStatus(userDTO.getStatus());
+        }
+        if (userDTO.getRole() != null) {
+            user.setRole(userDTO.getRole());
         }
 
         return userRepository.save(user);
@@ -103,6 +107,7 @@ public class UserServiceImpl implements UserService {
         userVO.setEmail(user.getEmail());
         userVO.setPhone(user.getPhone());
         userVO.setStatus(user.getStatus());
+        userVO.setRole(user.getRole());
         userVO.setCreateTime(user.getCreateTime());
         return userVO;
     }

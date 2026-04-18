@@ -21,4 +21,6 @@ public class CreateUserDTO {
     private String email;
 
     private String phone;
+
+    private User.UserRole role = User.UserRole.USER;
 }

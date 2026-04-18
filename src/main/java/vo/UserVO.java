@@ -12,5 +12,6 @@ public class UserVO {
     private String email;
     private String phone;
     private User.UserStatus status;
+    private User.UserRole role;
     private LocalDateTime createTime;
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/qrcode")
+@RequestMapping("/qrcode")
 @Slf4j
 @Tag(name = "二维码管理", description = "二维码生成相关接口")
 public class QRCodeController {
